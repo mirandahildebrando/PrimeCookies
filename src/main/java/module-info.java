@@ -4,5 +4,10 @@ module brando.miranda.primecookies {
 
 
     opens brando.miranda.primecookies to javafx.fxml;
-    exports brando.miranda.primecookies;
+
+    opens brando.miranda.primecookies.controller to javafx.fxml;
+
+
+
+    exports brando.miranda.primecookies to javafx.graphics;
 }

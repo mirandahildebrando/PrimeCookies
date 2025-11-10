@@ -14,8 +14,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="705.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="brando.miranda.primecookies.controller.AdminController">
    <children>
       <Label alignment="CENTER" layoutX="174.0" layoutY="14.0" prefHeight="17.0" prefWidth="358.0" text="Cadastro" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
@@ -50,28 +51,28 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Spinner prefHeight="25.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button layoutX="141.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="tf_product" GridPane.columnIndex="1" />
+            <TextField fx:id="tf_quantity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Spinner fx:id="sp_price" prefHeight="25.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="bt_save" mnemonicParsing="false" onAction="#showProduct" prefHeight="25.0" prefWidth="87.0" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="bt_edit" layoutX="141.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="150.0" />
                </GridPane.margin>
             </Button>
-            <Button layoutX="141.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Excluir" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="bt_delete" layoutX="141.0" layoutY="151.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Excluir" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="300.0" />
                </GridPane.margin>
             </Button>
          </children>
       </GridPane>
-      <TableView layoutX="102.0" layoutY="267.0" prefHeight="259.0" prefWidth="685.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <TableView fx:id="tb_admin" layoutX="102.0" layoutY="267.0" prefHeight="259.0" prefWidth="685.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="Produto" />
-            <TableColumn prefWidth="75.0" text="Preço" />
-            <TableColumn prefWidth="75.0" text="Quantidade" />
+          <TableColumn fx:id="tc_id" prefWidth="91.0" text="ID" />
+          <TableColumn fx:id="tc_product" minWidth="6.0" prefWidth="261.0" text="Produto" />
+            <TableColumn fx:id="tc_price" prefWidth="178.0" text="Preço" />
+            <TableColumn fx:id="tc_quantity" prefWidth="154.0" text="Quantidade" />
         </columns>
       </TableView>
    </children>
